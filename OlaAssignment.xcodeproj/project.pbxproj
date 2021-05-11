@@ -13,6 +13,10 @@
 		4A065902264A4BED002CE0E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A065900264A4BED002CE0E9 /* Main.storyboard */; };
 		4A065904264A4BF8002CE0E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A065903264A4BF8002CE0E9 /* Assets.xcassets */; };
 		4A065907264A4BF8002CE0E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A065905264A4BF8002CE0E9 /* LaunchScreen.storyboard */; };
+		4A065915264A4E09002CE0E9 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06590F264A4E09002CE0E9 /* Vehicle.swift */; };
+		4A065916264A4E09002CE0E9 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A065910264A4E09002CE0E9 /* ErrorModel.swift */; };
+		4A065917264A4E09002CE0E9 /* OlaVehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A065912264A4E09002CE0E9 /* OlaVehicleViewModel.swift */; };
+		4A065918264A4E09002CE0E9 /* OlaVehicleMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A065914264A4E09002CE0E9 /* OlaVehicleMainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		4A065903264A4BF8002CE0E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A065906264A4BF8002CE0E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A065908264A4BF8002CE0E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A06590F264A4E09002CE0E9 /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		4A065910264A4E09002CE0E9 /* ErrorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		4A065912264A4E09002CE0E9 /* OlaVehicleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OlaVehicleViewModel.swift; sourceTree = "<group>"; };
+		4A065914264A4E09002CE0E9 /* OlaVehicleMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OlaVehicleMainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,9 @@
 		4A0658F9264A4BED002CE0E9 /* OlaAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				4A06590E264A4E09002CE0E9 /* Model */,
+				4A065913264A4E09002CE0E9 /* View */,
+				4A065911264A4E09002CE0E9 /* ViewModel */,
 				4A0658FA264A4BED002CE0E9 /* AppDelegate.swift */,
 				4A0658FC264A4BED002CE0E9 /* SceneDelegate.swift */,
 				4A0658FE264A4BED002CE0E9 /* ViewController.swift */,
@@ -65,6 +76,31 @@
 				4A065908264A4BF8002CE0E9 /* Info.plist */,
 			);
 			path = OlaAssignment;
+			sourceTree = "<group>";
+		};
+		4A06590E264A4E09002CE0E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A06590F264A4E09002CE0E9 /* Vehicle.swift */,
+				4A065910264A4E09002CE0E9 /* ErrorModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A065911264A4E09002CE0E9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4A065912264A4E09002CE0E9 /* OlaVehicleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4A065913264A4E09002CE0E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A065914264A4E09002CE0E9 /* OlaVehicleMainViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A065916264A4E09002CE0E9 /* ErrorModel.swift in Sources */,
+				4A065915264A4E09002CE0E9 /* Vehicle.swift in Sources */,
 				4A0658FF264A4BED002CE0E9 /* ViewController.swift in Sources */,
 				4A0658FB264A4BED002CE0E9 /* AppDelegate.swift in Sources */,
+				4A065917264A4E09002CE0E9 /* OlaVehicleViewModel.swift in Sources */,
 				4A0658FD264A4BED002CE0E9 /* SceneDelegate.swift in Sources */,
+				4A065918264A4E09002CE0E9 /* OlaVehicleMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
