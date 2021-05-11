@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  OlaAssignment
+
+  Created by Sanjeeva Reddy Nandela on 5/11/21.
+  Copyright © 2021 Sanjeeva Reddy Nandela. All rights reserved.
+*/
+
+// Networking
+"invalid_url" = "Invalid URL";
+"invalid_data" = "Invalid Data";
+"decoding_failed" = "JSON Decoding failed";
+"parsing_error" = "Error Parsing file";
+"parsing_error_continued" = "With extension";
+"data_error" = "Data Error";
+"empty_data" = "Data is Empty";
+
+//
+"response_failed" = "Consent response failed";
+"network_failed" = "Network Error: Consent response failed";
+
+//
+"service_not_available" = "Service Not Available";
+
+//AlertTitle
+"error" = "Error";
+
+//InternetConnectivity Alert
+"internet_connection_issue" = "No Internet Connection";
+"internet_connection_subtitle" = "Make sure your device is connected to internet";
+"request_time_out_error" = "Service unavailable. Please try again.";
+"something_went_wong" = "Something went worng, Error code:";
+

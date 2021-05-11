@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +12,51 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLl-mI-fNh">
+                                <rect key="frame" x="92" y="315.5" width="230" height="265"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getting your location..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vz5-Me-HDp">
+                                        <rect key="frame" x="35" y="224" width="174" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mKQ-21-4hv">
+                                        <rect key="frame" x="40" y="41.5" width="150" height="150"/>
+                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="mKQ-21-4hv" firstAttribute="top" secondItem="dLl-mI-fNh" secondAttribute="top" constant="41" id="Bxs-KO-7Zd"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vz5-Me-HDp" secondAttribute="bottom" constant="20" id="Hkd-H2-25Z"/>
+                                    <constraint firstItem="Vz5-Me-HDp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dLl-mI-fNh" secondAttribute="leading" constant="20" symbolic="YES" id="MuW-9Z-SAa"/>
+                                    <constraint firstItem="mKQ-21-4hv" firstAttribute="height" secondItem="dLl-mI-fNh" secondAttribute="height" multiplier="0.683019" constant="-30" id="Wr0-rh-Wpg"/>
+                                    <constraint firstItem="mKQ-21-4hv" firstAttribute="centerX" secondItem="dLl-mI-fNh" secondAttribute="centerX" id="Xr9-lN-yOb"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vz5-Me-HDp" secondAttribute="trailing" constant="21" id="eEH-or-lrR"/>
+                                    <constraint firstItem="mKQ-21-4hv" firstAttribute="width" secondItem="dLl-mI-fNh" secondAttribute="width" multiplier="0.782609" constant="-30" id="rjc-yW-QOX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dLl-mI-fNh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Dvn-QW-5MF"/>
+                            <constraint firstItem="dLl-mI-fNh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="S3Q-aj-4aP"/>
+                            <constraint firstItem="dLl-mI-fNh" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.555556" id="tM6-dX-pZx"/>
+                            <constraint firstItem="dLl-mI-fNh" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.295759" id="wEa-rY-OeD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mappin.circle" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

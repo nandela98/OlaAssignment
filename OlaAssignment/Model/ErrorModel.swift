@@ -9,8 +9,12 @@
 import Foundation
 
 struct ErrorModel: Error {
-    
     // MARK: - Properties
     var message: String
-    
+}
+
+struct ErrorCodes {
+    static let errorCode404 = "404"
+    static let errorDomainToCheckInternetNotAvailable = "NSURLErrorDomain Code=-1009"
+    static let requestTimeout = "The request timed out."
 }
