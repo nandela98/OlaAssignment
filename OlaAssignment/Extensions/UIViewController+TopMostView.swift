@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIViewController {
-    
+    /// get top most controller  to display / remove alert or loader from view if  we face error
     func topMostViewController() -> UIViewController {
         
         if let presented = self.presentedViewController {

@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+     Global alert for any message to display
+*/
 func showAlert(title: String? = "Alert", message: String, okTitle: String? = "OK", completion: @escaping (_ okPressed: Bool) -> ()?) {
     let alertController: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
     alertController.addAction(UIAlertAction(title: okTitle, style: .default, handler: { (action) in

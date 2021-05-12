@@ -9,7 +9,9 @@
 import UIKit
 
 extension String {
-    
+    /**
+        for reading localizable string
+    */
     func localized(withComment comment: String? = nil) -> String {
         return NSLocalizedString(self, comment: comment ?? "")
     }

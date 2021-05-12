@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// return the baseUrl - based on the environment 
 struct EnvironmentHelper {
     
     func getBaseUrl(service: ServiceType) -> String {

@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// customizing the server error description
 enum ErrorResult : Error {
     case network(errMessage: String)
     case parser(errMessage: String)
@@ -38,7 +39,6 @@ enum ErrorResult : Error {
     
     var errorType: Int {
         switch self {
-            
         case .network(errMessage:  _):
             return 1
         case .parser(errMessage:  ):
@@ -49,4 +49,10 @@ enum ErrorResult : Error {
             return 4
         }
     }
+}
+
+struct ErrorCodes {
+    static let errorCode404 = "404"
+    static let errorDomainToCheckInternetNotAvailable = "NSURLErrorDomain Code=-1009"
+    static let requestTimeout = "The request timed out."
 }

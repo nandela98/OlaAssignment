@@ -11,7 +11,6 @@ import UIKit
 fileprivate let overlayViewTag: Int = 91919
 fileprivate let activityIndicatorViewTag: Int = 10101
 
-// Public interface
 extension UIView {
     
     func showLoader() {

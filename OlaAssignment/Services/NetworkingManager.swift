@@ -15,7 +15,16 @@ protocol NetworkingManager {
 extension NetworkingManager {
     
     typealias CompletionHandler = (Decodable?, ErrorResult?) -> Void
-
+    
+    /// make request with server
+    /// - Parameters:
+    ///   - service: url endpoint
+    ///   - parameters: key value pair of params for the url to append
+    ///   - body: utf8 data of params
+    ///   - httpMethod: type of http request
+    ///   - httpHeaders: headers for request in key value pair(for ex: beare token, accept: json )
+    ///   - decode: decodable model object
+    ///   - completion: on completion (result / error)
     func makeRequest<T: Decodable>(_ service: ServiceType, parameters: [String: String]?, body: Data?, httpMethod: HTTPMethod, httpHeaders: [String: String]?, decode: @escaping (Decodable) -> T?, completion: @escaping (Result<T?, ErrorResult>) -> Void) {
         guard let url = buildUrl(service, queryParameters: parameters) else {
             completion(.failure(.network(errMessage: "invalid_url".localized()
@@ -45,6 +54,10 @@ extension NetworkingManager {
 
 fileprivate extension NetworkingManager {
     
+    /// check for availability of Internet or throw error
+    /// - Parameters:
+    ///   - error: error
+    ///   - completion: completion with error message or success
     func checkForAvailabilityOfInternetOrError(_ error: Error?, completion: CompletionHandler) {
         if error.debugDescription.contains(ErrorCodes.errorDomainToCheckInternetNotAvailable) {
             // This notification is to show no internet popup on current visible view controller
@@ -54,6 +67,11 @@ fileprivate extension NetworkingManager {
         }
     }
     
+    /// building url
+    /// - Parameters:
+    ///   - urlString: url endPoint
+    ///   - queryParameters: query params which add after ? in url
+    /// - Returns: formatted  url
     func buildUrl(_ urlString: ServiceType, queryParameters: [String: String]?) -> URL? {
         let baseUrl = EnvironmentHelper().getBaseUrl(service: urlString)
         let finalUrl = baseUrl + urlString.rawValue
@@ -65,6 +83,11 @@ fileprivate extension NetworkingManager {
         return urlComponents.url
     }
     
+    /// Communicates to server using URLSession
+    /// - Parameters:
+    ///   - request: URLRequest object
+    ///   - decodingType: decoding object
+    ///   - completion: returns result/error
     func performTask<T: Decodable>(with request: URLRequest, decodingType: T.Type, completion: @escaping CompletionHandler) {
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             let httpResponse = response as? HTTPURLResponse
@@ -92,6 +115,11 @@ fileprivate extension NetworkingManager {
         
     }
     
+    /// Decode json to model object using JSONDecode
+    /// - Parameters:
+    ///   - data: response data
+    ///   - decodingType: decoding object
+    ///   - completion: returns result / error
     func decode<T:Decodable>(withData data: Data, decodingType: T.Type, completion: CompletionHandler) {
         if decodingType.self == Data?.self {
             completion(data, nil)

@@ -8,10 +8,7 @@
 
 import Foundation
 
-struct Vehicles: Codable {
-    var vehicle: [Vehicle]?
-}
-
+// MARK: - Vehicle
 struct Vehicle: Codable {
     let id, modelIdentifier: String?
     let modelName, group: Group?
@@ -28,6 +25,7 @@ struct Vehicle: Codable {
     }
 }
 
+// MARK: - Vehicle Group
 enum Group: String, Codable {
     case groupLUX = ":LUX"
     case lux = "LUX"
@@ -35,6 +33,7 @@ enum Group: String, Codable {
     case prime = "PRIME"
 }
 
+// MARK: - Vehicle maintainence type
 enum InnerCleanliness: String, Codable {
     case lux = "LUX"
     case regular = "REGULAR"
@@ -63,20 +62,24 @@ struct VehicleDetails: Codable {
     }
 }
 
+// MARK: - Vehicle Color
 enum Color: String, Codable {
     case midnightBlack = "midnight_black"
     case midnightBlue = "midnight_blue"
 }
 
+// MARK: - Vehicle FuelType
 enum FuelType: String, Codable {
     case d = "D"
     case p = "P"
 }
 
+// MARK: - Vehicle Make
 enum Make: String, Codable {
     case bmw = "BMW"
 }
 
+// MARK: - Vehicle Transmission
 enum Transmission: String, Codable {
     case a = "A"
     case m = "M"

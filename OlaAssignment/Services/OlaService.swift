@@ -10,7 +10,7 @@ import Foundation
 protocol OlaServiceProtocol {
     func fetchVehicleData(completion: @escaping(Result<[Vehicle]?, ErrorResult>) -> Void)
 }
-
+/// OlaService to fetch data from service 
 final class OlaService: BaseService, OlaServiceProtocol, NetworkingManager {
     
     func fetchVehicleData(completion: @escaping(Result<[Vehicle]?, ErrorResult>) -> Void) {

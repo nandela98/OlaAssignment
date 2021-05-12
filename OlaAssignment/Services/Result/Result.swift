@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// on success/failure of api call - returns result as generic 
 enum Result<T, E:Error> {
     case success(T?)
     case failure(E?)

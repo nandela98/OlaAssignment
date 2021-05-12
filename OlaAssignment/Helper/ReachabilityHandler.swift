@@ -9,6 +9,9 @@
 import Foundation
 import Reachability
 
+/**
+      handler for network reachability - for service requests
+ */
 final class ReachabilityHandler {
     
     private var reachability : Reachability?
