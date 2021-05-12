@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import Reachability
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var internetPopupOpen: Bool? =  false
+    private weak var rechabilityObserver: ReachabilityHandler?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        onApplicationLaunch()
         return true
     }
 
@@ -34,4 +36,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
+fileprivate extension AppDelegate {
+    
+    func onApplicationLaunch() {
+        addInternetCheckObserver()
+    }
+    
+    /**
+       setup notification to show internet not avialble popup
+    */
+    func addInternetCheckObserver() {
+        let rechabilityHandler = ReachabilityHandler()
+        rechabilityObserver = rechabilityHandler
+        NotificationCenter.default.addObserver(self, selector: #selector(showInternetAlert), name: OlaConstants.NotificationConstants.ShowInternetPopup, object: nil)
+    }
+    
+    /**
+       Show intetnet not available popup if internet connection not available
+     */
+    @objc private func showInternetAlert()
+    {
+        DispatchQueue.main.async {
+            if let topController = UIApplication.shared.topMostViewController() {
+                topController.hideLoader()
+            }
+            if self.internetPopupOpen == false {
+                self.internetPopupOpen = true
+                showAlert(title: "internet_connection_issue".localized(), message: "internet_connection_subtitle".localized()) { (sucess) in
+                    self.internetPopupOpen  = false
+                }
+            }
+        }
+    }
+    
+}
+
 
