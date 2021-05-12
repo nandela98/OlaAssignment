@@ -8,13 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
+    /// segue to navigate other screen - given fullscreen support view for OlaVehicleMainViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let target = segue.destination as? OlaVehicleMainViewController {
+            target.modalPresentationStyle = .overCurrentContext
+        }
+    }
 
 }
 
