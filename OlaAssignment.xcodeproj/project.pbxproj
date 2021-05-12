@@ -14,7 +14,6 @@
 		4A065904264A4BF8002CE0E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A065903264A4BF8002CE0E9 /* Assets.xcassets */; };
 		4A065907264A4BF8002CE0E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A065905264A4BF8002CE0E9 /* LaunchScreen.storyboard */; };
 		4A065915264A4E09002CE0E9 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06590F264A4E09002CE0E9 /* Vehicle.swift */; };
-		4A065916264A4E09002CE0E9 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A065910264A4E09002CE0E9 /* ErrorModel.swift */; };
 		4A065917264A4E09002CE0E9 /* OlaVehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A065912264A4E09002CE0E9 /* OlaVehicleViewModel.swift */; };
 		4A065918264A4E09002CE0E9 /* OlaVehicleMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A065914264A4E09002CE0E9 /* OlaVehicleMainViewController.swift */; };
 		4A065923264A515A002CE0E9 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06591A264A515A002CE0E9 /* ServiceType.swift */; };
@@ -41,6 +40,9 @@
 		4A06594D264A654C002CE0E9 /* OlaVehicleDisplayTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A06594B264A654C002CE0E9 /* OlaVehicleDisplayTVC.xib */; };
 		4A06594F264A7051002CE0E9 /* OlaVehicleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A06594E264A7051002CE0E9 /* OlaVehicleDataSource.swift */; };
 		4A065953264A97E6002CE0E9 /* OlaVehiclesSheetHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A065952264A97E6002CE0E9 /* OlaVehiclesSheetHeaderView.swift */; };
+		4AAB4D5F264BA92100595B1B /* OlaAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB4D5E264BA92100595B1B /* OlaAnnotation.swift */; };
+		4AAB4D61264BA93100595B1B /* OlaAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB4D60264BA93100595B1B /* OlaAnnotationView.swift */; };
+		4AAB4D69264BD8B900595B1B /* OlaBottomSheetPull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB4D68264BD8B900595B1B /* OlaBottomSheetPull.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +55,6 @@
 		4A065906264A4BF8002CE0E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A065908264A4BF8002CE0E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A06590F264A4E09002CE0E9 /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
-		4A065910264A4E09002CE0E9 /* ErrorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		4A065912264A4E09002CE0E9 /* OlaVehicleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OlaVehicleViewModel.swift; sourceTree = "<group>"; };
 		4A065914264A4E09002CE0E9 /* OlaVehicleMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OlaVehicleMainViewController.swift; sourceTree = "<group>"; };
 		4A06591A264A515A002CE0E9 /* ServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
@@ -80,6 +81,9 @@
 		4A06594B264A654C002CE0E9 /* OlaVehicleDisplayTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OlaVehicleDisplayTVC.xib; sourceTree = "<group>"; };
 		4A06594E264A7051002CE0E9 /* OlaVehicleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlaVehicleDataSource.swift; sourceTree = "<group>"; };
 		4A065952264A97E6002CE0E9 /* OlaVehiclesSheetHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlaVehiclesSheetHeaderView.swift; sourceTree = "<group>"; };
+		4AAB4D5E264BA92100595B1B /* OlaAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlaAnnotation.swift; sourceTree = "<group>"; };
+		4AAB4D60264BA93100595B1B /* OlaAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlaAnnotationView.swift; sourceTree = "<group>"; };
+		4AAB4D68264BD8B900595B1B /* OlaBottomSheetPull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlaBottomSheetPull.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				4A06590F264A4E09002CE0E9 /* Vehicle.swift */,
-				4A065910264A4E09002CE0E9 /* ErrorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 		4A065913264A4E09002CE0E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4AAB4D5D264BA8F600595B1B /* OlaMapAnnotation */,
 				4A065950264A9782002CE0E9 /* Cells */,
 				4A065951264A9782002CE0E9 /* Controllers */,
 			);
@@ -215,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				4A065948264A5F7E002CE0E9 /* OlaImageLoader.swift */,
+				4AAB4D68264BD8B900595B1B /* OlaBottomSheetPull.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -237,6 +242,15 @@
 				4A065943264A57B7002CE0E9 /* OlaVehiclesSheetViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4AAB4D5D264BA8F600595B1B /* OlaMapAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				4AAB4D5E264BA92100595B1B /* OlaAnnotation.swift */,
+				4AAB4D60264BA93100595B1B /* OlaAnnotationView.swift */,
+			);
+			path = OlaMapAnnotation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,12 +361,13 @@
 				4A065940264A525C002CE0E9 /* ReachabilityHandler.swift in Sources */,
 				4A065934264A51D5002CE0E9 /* MapView+VisibleRect.swift in Sources */,
 				4A065939264A51D5002CE0E9 /* TableView+Configuration.swift in Sources */,
-				4A065916264A4E09002CE0E9 /* ErrorModel.swift in Sources */,
 				4A06594F264A7051002CE0E9 /* OlaVehicleDataSource.swift in Sources */,
 				4A065937264A51D5002CE0E9 /* Loader+View.swift in Sources */,
+				4AAB4D5F264BA92100595B1B /* OlaAnnotation.swift in Sources */,
 				4A065938264A51D5002CE0E9 /* String+Extension.swift in Sources */,
 				4A065915264A4E09002CE0E9 /* Vehicle.swift in Sources */,
 				4A0658FF264A4BED002CE0E9 /* ViewController.swift in Sources */,
+				4AAB4D69264BD8B900595B1B /* OlaBottomSheetPull.swift in Sources */,
 				4A065949264A5F7E002CE0E9 /* OlaImageLoader.swift in Sources */,
 				4A0658FB264A4BED002CE0E9 /* AppDelegate.swift in Sources */,
 				4A06593C264A5203002CE0E9 /* OlaConstants.swift in Sources */,
@@ -362,6 +377,7 @@
 				4A065918264A4E09002CE0E9 /* OlaVehicleMainViewController.swift in Sources */,
 				4A065926264A515A002CE0E9 /* EnvironmentHelper.swift in Sources */,
 				4A065928264A515A002CE0E9 /* HttpMethods.swift in Sources */,
+				4AAB4D61264BA93100595B1B /* OlaAnnotationView.swift in Sources */,
 				4A065923264A515A002CE0E9 /* ServiceType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
